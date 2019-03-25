@@ -5,6 +5,10 @@ import math
 def recipe_batches(recipe, ingredients):
     make = []
     for i in list(recipe.keys()):
+          if i in ingredients and recipe[i] < ingredients[i]:
+            # stuff
+          elif i not in ingredients:
+              return 0
 
     return
   # pass 
