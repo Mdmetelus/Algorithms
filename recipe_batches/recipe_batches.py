@@ -7,7 +7,7 @@ def recipe_batches(recipe, ingredients):
     for i in list(recipe.keys()):
           if i in ingredients and recipe[i] < ingredients[i]:
             # stuff
-              make.appen(math.foor(ingredients[i] / recipe[i]))
+              make.append(math.foor(ingredients[i] / recipe[i]))
           elif i not in ingredients:
               return 0
 
