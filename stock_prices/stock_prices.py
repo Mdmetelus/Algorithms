@@ -3,7 +3,22 @@
 import argparse
 
 def find_max_profit(prices):
-  pass
+  x = 0
+  y = 0
+  x = min(prices)
+  # y = max(prices)
+  
+  if x == prices[-1]:
+      y = min(prices[:-1])
+      primary = -y +x 
+      if prices[prices.index(y) + 1 : -1]:
+          secondary = -y + max(prices[prices.index(y) + 1 : -1])
+          return primary if primary > secondary else secondary
+      return primary
+  else:
+      y= max(prices[prices.index(x) + 1 :])
+      return y - x
+  # pass
 
 
 if __name__ == '__main__':
